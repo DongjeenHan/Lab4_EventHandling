@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { useState } from 'react';
+import { Button, StyleSheet, TextInput, View } from 'react-native';
 
 export default function ToDoForm({ addTask }) {
   const [input, setInput] = useState('');
 
   const handleAdd = () => {
     if (input.trim() !== '') {
-      addTask(input);  // 부모(App)로 전달
-      setInput('');    // 입력창 초기화
+      addTask(input);    
+      setInput('');       
     }
   };
 
